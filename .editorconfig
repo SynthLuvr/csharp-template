@@ -1,0 +1,62 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{json,xml,csproj,props,targets,yml,yaml,sh}]
+indent_size = 2
+
+[*.cs]
+
+# ---- Whitespace/layout is owned by CSharpier (the Biome role). ----
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_preserve_single_line_statements = true
+
+# ---- Code style (severity >= warning is enforced; mirrored from TS template). ----
+# File-scoped namespaces everywhere.
+csharp_style_namespace_declarations = file_scoped:warning
+# Expression-bodied members for single-line methods/properties (arrow-function analogue).
+csharp_style_expression_bodied_methods = when_on_single_line:warning
+csharp_style_expression_bodied_properties = true:warning
+csharp_style_expression_bodied_accessors = true:warning
+# Prefer to omit braces for single statements (strip-braces analogue).
+csharp_prefer_braces = false:suggestion
+# var when the type is apparent.
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_for_built_in_types = false:suggestion
+# using directives.
+csharp_using_directive_placement = outside_namespace:suggestion
+dotnet_sort_system_directives_first = true
+# Modern language features.
+csharp_style_prefer_switch_expression = true:suggestion
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+dotnet_style_prefer_compound_assignment = true:suggestion
+dotnet_style_readonly_field = true:warning
+
+# ---- Analyzer severities: relax noisy rules so minimal stubs stay clean. ----
+dotnet_diagnostic.SA0001.severity = none
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.SA1601.severity = none
+dotnet_diagnostic.SA1602.severity = none
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1642.severity = none
+dotnet_diagnostic.SA1101.severity = none
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.SA1413.severity = none
+dotnet_diagnostic.RCS1090.severity = none
+dotnet_diagnostic.CA2007.severity = none

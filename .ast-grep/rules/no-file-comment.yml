@@ -1,0 +1,8 @@
+# Flags C# files that begin with a top-level comment (a // line or /* block).
+# ast-grep treats comments as trivia, so we match the root compilation_unit's
+# text with a regex anchored to the start of the file.
+id: no-file-comment
+language: CSharp
+rule:
+  kind: compilation_unit
+  regex: '^\s*(//|/\*)'

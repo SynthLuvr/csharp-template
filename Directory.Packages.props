@@ -1,0 +1,20 @@
+<Project>
+  <!-- Central Package Management: all NuGet versions pinned in one place (the
+       pnpm equivalent). .csproj files reference packages WITHOUT a Version. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Test framework (the Vitest role) -->
+    <PackageVersion Include="TUnit.Core" Version="1.63.0" />
+    <PackageVersion Include="TUnit.Engine" Version="1.63.0" />
+    <PackageVersion Include="TUnit.Assertions" Version="1.63.0" />
+    <PackageVersion Include="Microsoft.Testing.Platform" Version="2.3.3" />
+
+    <!-- Type-aware analyzers (the oxlint role) -->
+    <PackageVersion Include="Roslynator.Analyzers" Version="4.15.0" />
+    <PackageVersion Include="Roslynator.Formatting.Analyzers" Version="4.15.0" />
+    <PackageVersion Include="StyleCop.Analyzers" Version="1.1.118" />
+  </ItemGroup>
+</Project>
