@@ -1,3 +1,10 @@
+# Resolve `dotnet` and `csharpier` from the default ~/.dotnet install location
+# (a fresh WSL shell rc won't have added it to PATH). DOTNET_ROOT lets
+# global-tool apphosts locate the runtime without /etc/dotnet/install_location.
+home := env_var_or_default("HOME", "")
+export PATH := home + "/.dotnet:" + home + "/.dotnet/tools:" + env_var("PATH")
+export DOTNET_ROOT := env_var_or_default("DOTNET_ROOT", home + "/.dotnet")
+
 # Default: list available recipes.
 default:
     @just --list
