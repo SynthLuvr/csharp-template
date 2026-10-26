@@ -8,7 +8,7 @@
 #
 # Every tracked *.md file must be byte-for-byte identical to the output of
 # `pandoc <file> -t gfm`, making pandoc the single source of truth for Markdown
-# formatting. Requires `pandoc` (>= 3.1) on PATH.
+# formatting. Requires `pandoc` (>= 3.2) on PATH.
 set -euo pipefail
 
 mode="${1:-}"
@@ -18,7 +18,7 @@ if [[ "$mode" != "--check" && "$mode" != "--write" ]]; then
 fi
 
 if ! command -v pandoc >/dev/null 2>&1; then
-  echo "pandoc was not found on PATH. Install pandoc (>= 3.1) and retry." >&2
+  echo "pandoc was not found on PATH. Install pandoc (>= 3.2) and retry." >&2
   exit 1
 fi
 
