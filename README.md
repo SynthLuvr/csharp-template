@@ -26,7 +26,7 @@ new projects.
   `dotnet tool install -g csharpier --version 1.3.0`
 - [ast-grep](https://ast-grep.github.io) 0.51.0 —
   `npm install -g @ast-grep/cli@0.51.0`
-- [pandoc](https://pandoc.org) \>= 3.1 — required by `just lint-md` /
+- [pandoc](https://pandoc.org) \>= 3.2 — required by `just lint-md` /
   `just format-md`
 
 ## Quick Start
