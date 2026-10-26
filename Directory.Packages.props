@@ -7,14 +7,14 @@
 
   <ItemGroup>
     <!-- Test framework (the Vitest role) -->
-    <PackageVersion Include="TUnit.Core" Version="1.63.0" />
-    <PackageVersion Include="TUnit.Engine" Version="1.63.0" />
-    <PackageVersion Include="TUnit.Assertions" Version="1.63.0" />
-    <PackageVersion Include="Microsoft.Testing.Platform" Version="2.3.3" />
+    <PackageVersion Include="TUnit.Core" Version="1.76.28" />
+    <PackageVersion Include="TUnit.Engine" Version="1.76.28" />
+    <PackageVersion Include="TUnit.Assertions" Version="1.76.28" />
+    <PackageVersion Include="Microsoft.Testing.Platform" Version="2.5.1" />
 
     <!-- Type-aware analyzers (the oxlint role) -->
-    <PackageVersion Include="Roslynator.Analyzers" Version="4.15.0" />
-    <PackageVersion Include="Roslynator.Formatting.Analyzers" Version="4.15.0" />
+    <PackageVersion Include="Roslynator.Analyzers" Version="5.0.1" />
+    <PackageVersion Include="Roslynator.Formatting.Analyzers" Version="5.0.1" />
     <PackageVersion Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
 </Project>
