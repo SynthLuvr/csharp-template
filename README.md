@@ -6,17 +6,17 @@ new projects.
 
 ## Tech Stack
 
-| Tool                                                                                                                  | Purpose                            |
-|-----------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| [.NET 10 SDK](https://dotnet.microsoft.com)                                                                           | Build + type-check (Roslyn)        |
-| [NuGet + CPM](https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management)                          | Package manager (central versions) |
-| [CSharpier](https://csharpier.com)                                                                                    | Opinionated code formatter         |
-| [dotnet format](https://learn.microsoft.com/dotnet/core/tools/dotnet-format)                                          | Style + analyzer fixes             |
-| [Roslynator](https://github.com/dotnet/roslynator) / [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) | Type-aware analyzers               |
-| [ast-grep](https://ast-grep.github.io)                                                                                | Structural lint rules              |
-| [TUnit](https://thomhurst.github.io/TUnit)                                                                            | Test runner (source-generated)     |
-| [just](https://github.com/casey/just)                                                                                 | Script orchestration               |
-| [pandoc](https://pandoc.org)                                                                                          | Markdown formatter (GFM)           |
+| Tool | Purpose |
+|----|----|
+| [.NET 10 SDK](https://dotnet.microsoft.com) | Build + type-check (Roslyn) |
+| [NuGet + CPM](https://learn.microsoft.com/nuget/consume-packages/Central-Package-Management) | Package manager (central versions) |
+| [CSharpier](https://csharpier.com) | Opinionated code formatter |
+| [dotnet format](https://learn.microsoft.com/dotnet/core/tools/dotnet-format) | Style + analyzer fixes |
+| [Roslynator](https://github.com/dotnet/roslynator) / [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) | Type-aware analyzers |
+| [ast-grep](https://ast-grep.github.io) | Structural lint rules |
+| [TUnit](https://thomhurst.github.io/TUnit) | Test runner (source-generated) |
+| [just](https://github.com/casey/just) | Script orchestration |
+| [pandoc](https://pandoc.org) | Markdown formatter (GFM) |
 
 ## Prerequisites
 
@@ -24,8 +24,8 @@ new projects.
 - [just](https://github.com/casey/just) — a command runner
 - [CSharpier](https://csharpier.com) 1.3.0 —
   `dotnet tool install -g csharpier --version 1.3.0`
-- [ast-grep](https://ast-grep.github.io) 0.45.0 —
-  `npm install -g @ast-grep/cli@0.45.0`
+- [ast-grep](https://ast-grep.github.io) 0.51.0 —
+  `npm install -g @ast-grep/cli@0.51.0`
 - [pandoc](https://pandoc.org) \>= 3.1 — required by `just lint-md` /
   `just format-md`
 
